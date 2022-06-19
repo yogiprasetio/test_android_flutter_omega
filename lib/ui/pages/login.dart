@@ -115,14 +115,14 @@ class Login extends StatelessWidget {
                         onPressed: () {
                           userName = userNameController.text;
                           password = passwordController.text;
-                          if(userName == "gbs_user" && password == "12345" ){
-                                // Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
+                          if(userName == "user" && password == "123456" ){
+                                 Navigator.push(context, MaterialPageRoute(builder: (context) => PageOne()));
                             }else{
                               ScaffoldMessenger.of(context).showSnackBar(
                                 SnackBar(
                                   backgroundColor: Colors.red,
                                   content: Text(
-                                    'maaf anda tidak bisa mengakses modul tersebut!',
+                                    'INVALID CREDENTIALS!',
                                     textAlign: TextAlign.center,
                                   ),
                                   ),
@@ -149,9 +149,7 @@ class Login extends StatelessWidget {
                           child: Text(
                             "LOGIN",
                             textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold
-                            ),
+                            style: redFontStyle1,
                           ),
                         ),
                       ),
